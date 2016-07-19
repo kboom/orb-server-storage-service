@@ -1,12 +1,16 @@
 buildscript {
+
     repositories {
+        mavenCentral()
         maven {
-            url('http://localhost:10001/content/groups/public/')
+            url "http://dl.bintray.com/kboom/gradle-plugins"
         }
     }
+
     dependencies {
-        classpath 'com.kbhit.orangebox:orb-service-plugin:1.2-SNAPSHOT'
+        classpath 'com.kbhit.orangebox:orb-service-plugin:1.1'
     }
+
 }
 
 apply plugin: 'orb-service'
@@ -29,13 +33,19 @@ docker {
 }
 
 repositories {
-    maven {
-        url('http://localhost:10001/content/groups/public/')
-    }
+    mavenCentral()
 }
 
 dependencies {
     compile 'org.hibernate:hibernate-core:5.2.0.Final'
     compile 'org.springframework:spring-orm:4.3.0.RELEASE'
     compile 'com.oracle:ojdbc6:11.2.0.3'
+}
+
+task stage {
+    dependsOn build
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.14'
 }
