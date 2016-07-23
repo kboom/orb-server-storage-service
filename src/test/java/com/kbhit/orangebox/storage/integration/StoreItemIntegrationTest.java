@@ -9,11 +9,11 @@ public class StoreItemIntegrationTest extends AbstractIntegrationTest {
     @Test
     public void canStoreItem() {
         given()
-                .contentType("application/json").
-                when()
-                .get("/greet").
-                then()
-                .statusCode(200);
+            .contentType("application/json").
+        when()
+            .get("/greet").
+        then()
+            .statusCode(200);
     }
 
 }
