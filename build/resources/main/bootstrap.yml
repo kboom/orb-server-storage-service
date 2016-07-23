@@ -1,8 +1,9 @@
 spring:
   application:
-    name: orangebox-storage
+    name: orb-storage
   cloud:
     config:
+      failFast: true
       uri: ${ORANGEBOX_CONFIG_SERVER_URI:http://localhost:8888}
 
 ---
