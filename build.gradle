@@ -39,7 +39,7 @@ repositories {
 dependencies {
     compile 'org.hibernate:hibernate-core:5.2.0.Final'
     compile 'org.springframework:spring-orm:4.3.0.RELEASE'
-    compile 'com.oracle:ojdbc6:11.2.0.3'
+    compile group: 'postgresql', name: 'postgresql', version: '9.1-901-1.jdbc4'
 }
 
 task stage {

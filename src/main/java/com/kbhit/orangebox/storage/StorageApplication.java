@@ -60,15 +60,11 @@ public class StorageApplication {
     @Bean
     public DataSource dataSource(
             @Value("${jdbc.driverClassName}") String driverClassName,
-            @Value("${jdbc.url}") String url,
-            @Value("${jdbc.user}") String username,
-            @Value("${jdbc.pass}") String password
+            @Value("${jdbc.url}") String url
     ) {
         DriverManagerDataSource bean = new DriverManagerDataSource();
         bean.setDriverClassName(driverClassName);
         bean.setUrl(url);
-        bean.setUsername(username);
-        bean.setPassword(password);
         return bean;
     }
 
