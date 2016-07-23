@@ -40,6 +40,7 @@ dependencies {
     compile 'org.hibernate:hibernate-core:5.2.0.Final'
     compile 'org.springframework:spring-orm:4.3.0.RELEASE'
     compile group: 'postgresql', name: 'postgresql', version: '9.1-901-1.jdbc4'
+    testCompile group: 'com.jayway.restassured', name: 'rest-assured', version: '2.9.0'
 }
 
 task stage {
