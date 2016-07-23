@@ -5,10 +5,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class StorageController {
+class StorageController {
 
     @ApiOperation(value = "test", nickname = "testNickname")
-    @RequestMapping("/greet")
+    @RequestMapping(value = "/greet", consumes = "application/json")
     public String index() {
         return "Greetings from Spring Boot!";
     }
