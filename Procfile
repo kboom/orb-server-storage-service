@@ -1,1 +1,1 @@
-web: java -jar -Dserver.port=$PORT build/libs/orb-storage-1.0.jar --spring.profiles.active=heroku
+web: java -jar -Dserver.port=$PORT build/libs/orb-storage-1.0.jar --spring.profiles.active=heroku --JDBC_DATABASE_URL=$JDBC_DATABASE_URL
