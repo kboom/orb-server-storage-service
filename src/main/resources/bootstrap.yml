@@ -10,4 +10,4 @@ spring:
   profiles: dev
   cloud:
     config:
-      enabled: false # use configuration from local application.yml
+      enabled: false # use configuration from local application-dev.yml

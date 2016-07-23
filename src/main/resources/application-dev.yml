@@ -1,7 +1,6 @@
 # This configuration file configures the application to run in standalone mode when profile dev is set.
 spring:
   profiles:
-    active: dev
     include: H2
 eureka:
   client:
