@@ -1,6 +1,6 @@
 spring:
   application:
-    name: orangebox-storage
+    name: orb-storage
   cloud:
     config:
       failFast: true
